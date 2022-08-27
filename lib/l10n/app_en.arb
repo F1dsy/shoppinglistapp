@@ -1,6 +1,21 @@
 {
-    "settings": "Settings",
-    "@settings": {
-      "description": "settings"
-    }
+  "@dark": {
+    "description": "dark"
+  },
+  "@light": {
+    "description": "light"
+  },
+  "@settings": {
+    "description": "settings"
+  },
+  "@theme": {
+    "description": "theme"
+  },
+  "categories": "Categories",
+  "categoriesAndUnits": "Categories and Units",
+  "categoriesDescription": "Edit article categories",
+  "dark": "Dark",
+  "light": "Light",
+  "settings": "Settings",
+  "theme": "Theme"
 }

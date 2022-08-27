@@ -1,3 +1,9 @@
 {
-    "settings": "Einstellungen"
+  "categories": "Kategorien",
+  "categoriesAndUnits": "Kategorien und Einheiten",
+  "categoriesDescription": "Artikelkategorien bearbeiten",
+  "dark": "Dunkel",
+  "light": "Hell",
+  "settings": "Einstellungen",
+  "theme": "Thema"
 }

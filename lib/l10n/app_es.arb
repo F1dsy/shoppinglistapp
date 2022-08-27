@@ -1,3 +1,9 @@
 {
-    "settings": "Ajustes"
+  "categories": "Categorías",
+  "categoriesAndUnits": "Categorías y unidades",
+  "categoriesDescription": "editar",
+  "dark": "Oscuro",
+  "light": "Claro",
+  "settings": "Ajustes",
+  "theme": "Tema"
 }
