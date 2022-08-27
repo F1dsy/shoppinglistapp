@@ -23,8 +23,7 @@ class MyApp extends StatelessWidget {
               ChangeNotifierProvider(
                 create: (context) => ThemeValueNotifier(snapshot.data!),
               ),
-              ChangeNotifierProvider(
-                  create: (context) => ShoppingListProvider())
+              ChangeNotifierProvider(create: (context) => AppProvider())
             ],
             builder: (context, child) => MaterialApp(
               title: 'Flutter Demo',
