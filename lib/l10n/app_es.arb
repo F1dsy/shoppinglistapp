@@ -1,4 +1,6 @@
 {
+  "allFoodItems": "Todos Articulos",
+  "allFoodItemsDescription": "Ver todos articulos",
   "categories": "Categorías",
   "categoriesAndUnits": "Categorías y unidades",
   "categoriesDescription": "editar",

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shoppinglistapp/theme_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:shoppinglistapp/views/all_items_settings_view.dart';
 import 'package:shoppinglistapp/views/category_settings_view.dart';
 
 class SettingsView extends StatelessWidget {
@@ -52,6 +53,21 @@ class SettingsView extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => const CategorySettingsView(),
+              ));
+            },
+          ),
+          ListTile(
+            title: Text(AppLocalizations.of(context)!.allFoodItems),
+            subtitle:
+                Text(AppLocalizations.of(context)!.allFoodItemsDescription),
+            trailing: Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: Theme.of(context).textTheme.caption!.color,
+              // color: Color(0xB3FFFFFF),
+            ),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const AllItemsSettingsView(),
               ));
             },
           ),

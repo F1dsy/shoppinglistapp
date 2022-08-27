@@ -11,6 +11,8 @@
   "@theme": {
     "description": "theme"
   },
+  "allFoodItems": "All Articles",
+  "allFoodItemsDescription": "Show all articles",
   "categories": "Categories",
   "categoriesAndUnits": "Categories and Units",
   "categoriesDescription": "Edit article categories",
