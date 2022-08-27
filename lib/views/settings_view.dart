@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shoppinglistapp/theme_provider.dart';
+import 'package:shoppinglistapp/providers/theme_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shoppinglistapp/views/all_items_settings_view.dart';
 import 'package:shoppinglistapp/views/category_settings_view.dart';

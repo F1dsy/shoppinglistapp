@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shoppinglistapp/components/shopping_list_container.dart';
 
-import 'package:shoppinglistapp/provider.dart';
+import 'package:shoppinglistapp/providers/provider.dart';
 import 'package:shoppinglistapp/views/settings_view.dart';
 
 class HomeView extends StatelessWidget {

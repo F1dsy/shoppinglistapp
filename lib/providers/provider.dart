@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:shoppinglistapp/models/category.dart';
 import 'package:shoppinglistapp/models/food_item.dart';
 import 'package:shoppinglistapp/models/shopping_list.dart';
-import 'DUMMY_DATA.dart' as data;
+import '../DUMMY_DATA.dart' as data;
 
 class AppProvider extends ChangeNotifier {
   AppProvider() {
     categories = data.categories;
     _shoppingLists = [
-      ShoppingList(name: "List 1", categories: categories),
-      ShoppingList(name: "List 2", categories: categories),
+      ShoppingList(name: "List 1"),
+      ShoppingList(name: "List 2"),
     ];
   }
 
   late List<Category> categories = [];
 
-  final List<FoodItem> allFoodItems = [];
+  final List<FoodItem> allFoodItems = [...data.foodItems];
 
   late List<ShoppingList> _shoppingLists = [];
 
@@ -34,7 +34,7 @@ class AppProvider extends ChangeNotifier {
     return _shoppingLists;
   }
 
-  void reorderCategory(oldIndex, newIndex) {
+  void reorderCategory(int oldIndex, int newIndex) {
     if (oldIndex < newIndex) {
       newIndex -= 1;
     }
@@ -42,8 +42,22 @@ class AppProvider extends ChangeNotifier {
     categories.insert(newIndex, category);
   }
 
+  void reorderFoodItem(int oldIndex, int newIndex, Category newCategory) {
+    if (oldIndex < newIndex) {
+      newIndex -= 1;
+    }
+    FoodItem item = selectedShoppingList.itemList.removeAt(oldIndex);
+    selectedShoppingList.itemList.insert(newIndex, item);
+    _changeFoodItemGroup(item, newCategory);
+    notifyListeners();
+  }
+
   void setFoodItemState(FoodItem item, bool state) {
     item.isChecked = state;
     notifyListeners();
+  }
+
+  void _changeFoodItemGroup(FoodItem foodItem, Category newCategory) {
+    foodItem.category = newCategory;
   }
 }

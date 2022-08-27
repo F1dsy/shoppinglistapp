@@ -6,7 +6,7 @@ import 'package:shoppinglistapp/components/food_list_tile.dart';
 import 'package:shoppinglistapp/components/grouped_reorderable_list_view.dart';
 import 'package:shoppinglistapp/models/category.dart';
 import 'package:shoppinglistapp/models/food_item.dart';
-import 'package:shoppinglistapp/provider.dart';
+import 'package:shoppinglistapp/providers/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AllItemsSettingsView extends StatelessWidget {

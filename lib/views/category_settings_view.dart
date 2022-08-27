@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shoppinglistapp/components/category_dialog.dart';
 import 'package:shoppinglistapp/models/category.dart';
-import 'package:shoppinglistapp/provider.dart';
+import 'package:shoppinglistapp/providers/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CategorySettingsView extends StatelessWidget {
