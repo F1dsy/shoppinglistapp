@@ -46,13 +46,13 @@ class AppProvider extends ChangeNotifier {
     if (oldIndex < newIndex) {
       newIndex -= 1;
     }
-    FoodItem item = selectedShoppingList.itemList.removeAt(oldIndex);
+    CheckableFoodItem item = selectedShoppingList.itemList.removeAt(oldIndex);
     selectedShoppingList.itemList.insert(newIndex, item);
     _changeFoodItemGroup(item, newCategory);
     notifyListeners();
   }
 
-  void setFoodItemState(FoodItem item, bool state) {
+  void setFoodItemState(CheckableFoodItem item, bool state) {
     item.isChecked = state;
     notifyListeners();
   }

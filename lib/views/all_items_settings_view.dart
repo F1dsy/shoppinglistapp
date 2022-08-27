@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shoppinglistapp/components/category_dialog.dart';
 import 'package:shoppinglistapp/components/category_list_tile.dart';
 import 'package:shoppinglistapp/components/food_list_tile.dart';
 import 'package:shoppinglistapp/components/grouped_reorderable_list_view.dart';

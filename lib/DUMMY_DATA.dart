@@ -19,3 +19,15 @@ final List<FoodItem> foodItems = [
   FoodItem(name: "Thyme", category: categories[2]),
   FoodItem(name: "Thyme", category: categories[2]),
 ];
+
+final List<CheckableFoodItem> checkablefoodItems = [
+  CheckableFoodItem(name: "Basil", category: categories[0]),
+  CheckableFoodItem(name: "Oregano", category: categories[0]),
+  CheckableFoodItem(name: "Thyme", category: categories[0]),
+  CheckableFoodItem(name: "Thyme", category: categories[1]),
+  CheckableFoodItem(name: "Thyme", category: categories[1]),
+  CheckableFoodItem(name: "Thyme", category: categories[1]),
+  CheckableFoodItem(name: "Thyme", category: categories[2]),
+  CheckableFoodItem(name: "Thyme", category: categories[2]),
+  CheckableFoodItem(name: "Thyme", category: categories[2]),
+];
