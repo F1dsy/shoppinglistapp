@@ -26,12 +26,12 @@ class AllItemsSettingsView extends StatelessWidget {
       ),
       body: GroupedReorderableListView<FoodItem, Category>(
         elements: allItems,
-        prototypeItem: const ListTile(),
+        // prototypeItem: const ListTile(),
         itemBuilder: (context, item) => FoodListTile(
           item: item,
         ),
         onReorder: (oldIndex, newIndex, targetCategory) {
-          Provider.of<AppProvider>(context)
+          Provider.of<AppProvider>(context, listen: false)
               .reorderFoodItem(oldIndex, newIndex, targetCategory);
         },
         groupBy: (item) => item.category,

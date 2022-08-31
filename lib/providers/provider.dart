@@ -48,8 +48,7 @@ class AppProvider extends ChangeNotifier {
     }
     CheckableFoodItem item = selectedShoppingList.itemList.removeAt(oldIndex);
     selectedShoppingList.itemList.insert(newIndex, item);
-    _changeFoodItemGroup(item, newCategory);
-    notifyListeners();
+    changeFoodItemGroup(item, newCategory);
   }
 
   void setFoodItemState(CheckableFoodItem item, bool state) {
@@ -57,7 +56,24 @@ class AppProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void _changeFoodItemGroup(FoodItem foodItem, Category newCategory) {
+  void changeFoodItemGroup(FoodItem foodItem, Category newCategory) {
     foodItem.category = newCategory;
+    notifyListeners();
+  }
+
+  void updateFoodItem(
+    FoodItem item, {
+    String? name,
+    Category? category,
+    double? price,
+    double? quantity,
+    String? unit,
+  }) {
+    if (category != null) item.category = category;
+    if (name != null) item.name = name;
+    item.price = price;
+    item.quantity = quantity;
+    item.unit = unit;
+    notifyListeners();
   }
 }

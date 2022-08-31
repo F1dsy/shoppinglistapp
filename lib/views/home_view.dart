@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shoppinglistapp/components/bottom_navigation_bar.dart';
 import 'package:shoppinglistapp/components/shopping_list_container.dart';
 
 import 'package:shoppinglistapp/providers/provider.dart';
@@ -9,7 +10,7 @@ class HomeView extends StatelessWidget {
   HomeView({Key? key}) : super(key: key);
 
   final Map<String, Function> popUpActions = {
-    "settings": (context) {
+    "Settings": (context) {
       Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => const SettingsView(),
       ));
@@ -72,43 +73,7 @@ class HomeView extends StatelessWidget {
       body: provider.shoppingLists.isNotEmpty
           ? ShoppingListContainer(shoppingList: provider.selectedShoppingList)
           : _noLists,
-      bottomNavigationBar: Transform.translate(
-        offset: Offset(0, -1 * MediaQuery.of(context).viewInsets.bottom),
-        child: SizedBox(
-          width: double.infinity,
-          height: 70,
-          child: BottomAppBar(
-            elevation: 0,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 18.0, right: 18.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Flexible(
-                    flex: 4,
-                    child: SizedBox(
-                      height: 45,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          fillColor: Colors.white70,
-                          filled: true,
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide.none,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Flexible(
-                    child: IconButton(
-                        onPressed: () {}, icon: const Icon(Icons.menu)),
-                  )
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
+      bottomNavigationBar: const BottomNavBar(),
     );
   }
 }
