@@ -13,11 +13,17 @@
   },
   "allFoodItems": "All Articles",
   "allFoodItemsDescription": "Show all articles",
+  "cancel": "Cancel",
   "categories": "Categories",
   "categoriesAndUnits": "Categories and Units",
   "categoriesDescription": "Edit article categories",
   "dark": "Dark",
   "light": "Light",
+  "no": "No",
+  "price": "Price",
+  "quantity": "Quantity",
   "settings": "Settings",
-  "theme": "Theme"
+  "theme": "Theme",
+  "unit": "Unit",
+  "yes": "Yes"
 }

@@ -1,11 +1,17 @@
 {
   "allFoodItems": "Todos Articulos",
   "allFoodItemsDescription": "Ver todos articulos",
+  "cancel": "Cancelar",
   "categories": "Categorías",
   "categoriesAndUnits": "Categorías y unidades",
   "categoriesDescription": "editar",
   "dark": "Oscuro",
   "light": "Claro",
+  "no": "No",
+  "price": "Coste",
+  "quantity": "Cantidad",
   "settings": "Ajustes",
-  "theme": "Tema"
+  "theme": "Tema",
+  "unit": "Unidad",
+  "yes": "Sí"
 }

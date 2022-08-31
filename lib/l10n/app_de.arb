@@ -1,11 +1,17 @@
 {
   "allFoodItems": "Alle Artikel",
   "allFoodItemsDescription": "Alle Artikel ansehen",
+  "cancel": "Abbrechen",
   "categories": "Kategorien",
   "categoriesAndUnits": "Kategorien und Einheiten",
   "categoriesDescription": "Artikelkategorien bearbeiten",
   "dark": "Dunkel",
   "light": "Hell",
+  "no": "Nein",
+  "price": "Preis",
+  "quantity": "Anzahl",
   "settings": "Einstellungen",
-  "theme": "Thema"
+  "theme": "Thema",
+  "unit": "Einheit",
+  "yes": "Ja"
 }
