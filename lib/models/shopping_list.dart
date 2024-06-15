@@ -6,6 +6,6 @@ class ShoppingList {
 
   final String name;
 
-  List<CheckableFoodItem> itemList = [...checkablefoodItems];
+  List<CheckableFoodItem> itemList = [...checkableFoodItems];
   List<CheckableFoodItem> checkedItems = [];
 }

@@ -15,7 +15,7 @@ class FoodListTile extends StatelessWidget {
       trailing: const Icon(Icons.drag_indicator),
       title: Text(item.name),
       onTap: () {
-        showFoodTileDialog(context, item);
+        showFoodTileDialog(context, item: item);
       },
     );
   }

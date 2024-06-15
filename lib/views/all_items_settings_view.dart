@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shoppinglistapp/components/category_list_tile.dart';
 import 'package:shoppinglistapp/components/food_list_tile.dart';
+import 'package:shoppinglistapp/components/food_tile_dialog.dart';
 import 'package:shoppinglistapp/components/grouped_reorderable_list_view.dart';
 import 'package:shoppinglistapp/models/category.dart';
 import 'package:shoppinglistapp/models/food_item.dart';
@@ -19,7 +20,9 @@ class AllItemsSettingsView extends StatelessWidget {
         title: Text(AppLocalizations.of(context)!.allFoodItems),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              showFoodTileDialog(context);
+            },
             icon: const Icon(Icons.add),
           ),
         ],

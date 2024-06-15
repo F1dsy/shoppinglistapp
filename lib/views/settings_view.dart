@@ -47,7 +47,7 @@ class SettingsView extends StatelessWidget {
             subtitle: Text(AppLocalizations.of(context)!.categoriesDescription),
             trailing: Icon(
               Icons.arrow_forward_ios_rounded,
-              color: Theme.of(context).textTheme.caption!.color,
+              color: Theme.of(context).textTheme.bodySmall!.color,
               // color: Color(0xB3FFFFFF),
             ),
             onTap: () {
@@ -62,7 +62,7 @@ class SettingsView extends StatelessWidget {
                 Text(AppLocalizations.of(context)!.allFoodItemsDescription),
             trailing: Icon(
               Icons.arrow_forward_ios_rounded,
-              color: Theme.of(context).textTheme.caption!.color,
+              color: Theme.of(context).textTheme.bodySmall!.color,
               // color: Color(0xB3FFFFFF),
             ),
             onTap: () {

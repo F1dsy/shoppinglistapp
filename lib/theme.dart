@@ -15,5 +15,37 @@ Future<ThemeMode> getThemeMode() async {
   }
 }
 
-ThemeData lightTheme = ThemeData.light();
-ThemeData darkTheme = ThemeData.dark();
+ThemeData baseTheme = ThemeData().copyWith(
+  appBarTheme: const AppBarTheme().copyWith(
+    elevation: 0,
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ButtonStyle(
+      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      ),
+      padding: MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.all(16)),
+    ),
+  ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: ButtonStyle(
+      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      ),
+      padding: MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.all(16)),
+    ),
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    border: const OutlineInputBorder().copyWith(
+      borderRadius: BorderRadius.circular(8.0),
+    ),
+    isDense: true,
+  ),
+);
+
+ThemeData lightTheme = baseTheme.copyWith(
+  colorScheme: const ColorScheme.light(),
+);
+
+ThemeData darkTheme = ThemeData.dark()
+    .copyWith(inputDecorationTheme: baseTheme.inputDecorationTheme);

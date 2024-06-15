@@ -27,9 +27,8 @@ class HomeView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        title: TextButton(
-          onPressed: () {
+        title: InkWell(
+          onTap: () {
             showDialog(
               context: context,
               builder: (context) => Dialog(
@@ -50,7 +49,6 @@ class HomeView extends StatelessWidget {
           },
           child: Text(
             provider.selectedShoppingList.name,
-            style: Theme.of(context).textTheme.headline6,
           ),
         ),
         actions: [

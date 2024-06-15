@@ -38,7 +38,8 @@ class CategorySettingsView extends StatelessWidget {
           },
         ),
         onReorder: (oldIndex, newIndex) {
-          Provider.of<AppProvider>(context).reorderCategory(oldIndex, newIndex);
+          Provider.of<AppProvider>(context, listen: false)
+              .reorderCategory(oldIndex, newIndex);
         },
       ),
     );

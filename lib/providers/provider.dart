@@ -61,6 +61,16 @@ class AppProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  void createCategory(Category category) {
+    categories.add(category);
+    notifyListeners();
+  }
+
+  void addFoodItem(FoodItem item) {
+    allFoodItems.add(item);
+    notifyListeners();
+  }
+
   void updateFoodItem(
     FoodItem item, {
     String? name,
@@ -71,9 +81,19 @@ class AppProvider extends ChangeNotifier {
   }) {
     if (category != null) item.category = category;
     if (name != null) item.name = name;
-    item.price = price;
-    item.quantity = quantity;
+    if (price != null) item.price = price;
+    if (quantity != null) item.quantity = quantity;
     item.unit = unit;
+    notifyListeners();
+  }
+
+  void updateCategory(
+    Category category, {
+    String? name,
+    Color? color,
+  }) {
+    if (name != null) category.name = name;
+    if (color != null) category.color = color;
     notifyListeners();
   }
 }

@@ -4,13 +4,15 @@ class FoodItem {
   FoodItem({
     required this.name,
     required this.category,
+    this.price = 0.00,
+    this.quantity = 1,
   });
 
   String name;
-  double? price;
-  double? quantity;
-  String? unit;
   Category category;
+  double price;
+  double quantity;
+  String? unit;
 }
 
 class CheckableFoodItem extends FoodItem {

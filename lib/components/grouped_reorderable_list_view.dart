@@ -56,7 +56,7 @@ class _GroupedReorderableListViewState<Item, Group>
     List elements = [];
     List<int> indexOfGroups = [];
 
-    _generateElements() {
+    generateElements() {
       elements = [];
 
       for (var i = 0; i < widget.elements.length; i++) {
@@ -77,7 +77,7 @@ class _GroupedReorderableListViewState<Item, Group>
       }
     }
 
-    _generateElements();
+    generateElements();
 
     onReorder(int oldIndex, int newIndex) {
       setState(() {
@@ -100,27 +100,27 @@ class _GroupedReorderableListViewState<Item, Group>
       });
     }
 
-    Widget _buildItem(BuildContext context, int index) {
+    Widget buildItem(BuildContext context, int index) {
       return widget.itemBuilder(context, elements[index]);
     }
 
-    Widget _buildGroupSeparator(BuildContext context, int index) {
+    Widget buildGroupSeparator(BuildContext context, int index) {
       return widget.groupSeparatorBuilder(context, elements[index]);
     }
 
     Widget itemBuilder(BuildContext context, int index) {
       Key key = _keys.putIfAbsent('$index', () => GlobalKey());
-      KeyedSubtree _keyedSubtree(child) => KeyedSubtree(
+      KeyedSubtree keyedSubtree(child) => KeyedSubtree(
             key: key,
             child: child,
           );
       final element = elements[index];
 
       if (element is Item) {
-        return _keyedSubtree(_buildItem(context, index));
+        return keyedSubtree(buildItem(context, index));
       }
       if (element is Group) {
-        return _keyedSubtree(_buildGroupSeparator(context, index));
+        return keyedSubtree(buildGroupSeparator(context, index));
       }
       return const SizedBox.shrink();
     }
